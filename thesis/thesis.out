@@ -1,0 +1,37 @@
+\BOOKMARK [0][-]{chapter*.2}{Список иллюстраций}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Список таблиц}{}% 2
+\BOOKMARK [0][-]{section*.4}{Введение}{}% 3
+\BOOKMARK [0][-]{chapter.1}{NEUCOGAR, организация моторного вывода}{}% 4
+\BOOKMARK [1][-]{section.1.1}{NEUCOGAR}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Организация моторного вывода}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.2.1}{Моторная кора}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.2}{Ствол головного мозга}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.3}{Основные проводящие пути}{section.1.2}% 9
+\BOOKMARK [0][-]{chapter.2}{Теоретическое обоснование}{}% 10
+\BOOKMARK [1][-]{section.2.1}{NEST}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{NEUCOGAR, интеграция}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Валидация}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.3.1}{Проверка влияния афферентных путей}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{Проверка взаимосвязи между моторным выводом и оценкой}{section.2.3}% 15
+\BOOKMARK [0][-]{chapter.3}{Спецификация}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Общая характеристика симуляции}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Основные функции}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Пути моделирования}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.3.1}{Кортикоспинальный тракт}{section.3.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.2}{Афферентный кортикальный вход}{section.3.3}% 21
+\BOOKMARK [1][-]{section.3.4}{Используемые типы синапсов}{chapter.3}% 22
+\BOOKMARK [0][-]{chapter.4}{Реализация}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Интеграция}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{Тесты}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Результаты}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Производительность}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Результаты эксперимента}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{Стимуляция моторной коры с эмоциональной мотивацией}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.4}{Влияние афферентных путей на систему}{chapter.5}% 30
+\BOOKMARK [0][-]{section*.17}{Заключение}{}% 31
+\BOOKMARK [1][-]{section.5.5}{Рекомендации к дальнейшему исследованию}{section*.17}% 32
+\BOOKMARK [1][-]{section.5.6}{Перспективы применения}{section*.17}% 33
+\BOOKMARK [1][-]{section.5.7}{Вывод}{section*.17}% 34
+\BOOKMARK [0][-]{chapter*.19}{Список литературы}{}% 35
+\BOOKMARK [0][-]{Приложение.a.A}{Теория}{}% 36
+\BOOKMARK [0][-]{Приложение.a.B}{Листинги исходного кода}{}% 37

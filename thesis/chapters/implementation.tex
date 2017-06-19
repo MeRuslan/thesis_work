@@ -1,0 +1,85 @@
+\chapter{Реализация}
+\label{chap:implementation}
+\section{Интеграция}
+Полученная модель состоит из следующих составных частей:
+\begin{itemize}
+	\item спинной мозг
+	\item продолговатый мозг
+	\item Варолиев мост
+	\item нейромышечные соединения
+	\item чувствительные нейроны периферической нервной системы, восходящие по спинному мозгу, через таламокортикальные пути к моторной и сенсорной областям коры мозга
+\end{itemize}
+
+В листинге ниже представлен код, представляющий эти данные в удобном для проекта \en{NEUCOGAR} виде: 
+\begin{lstlisting}
+spine = ({k_name: 'Spinal cord [Glu1]'},    # to lower motor neurons
+	{k_name: 'Spinal cord [Glu2]'},    # upwards to the thalamus
+	{k_name: 'Spinal cord [GABA]'},)   # pain reduction, internal use only
+spine_Glu1, spine_Glu2, spine_GABA = range(3)
+
+nmj = ({k_name: 'Muscle [Glu]'},)
+nmj_Glu = 0
+
+cellBodies = ({k_name: 'Muscle [Glu]'},)
+cellBodies_Glu = 0
+
+medulla = ({k_name: 'Medulla [GABA]'}, )
+medulla_GABA = 0
+
+reticular_formation = ({k_name: 'Reticular formation [Glu]'},
+	{k_name: 'Reticular formation [5HT]'},)
+reticular_formation_Glu, reticular_formation_5HT = range(2)
+
+pons = ({k_name: 'Pons [Glu]'},
+	{k_name: 'Pons [5HT]'})
+pons_Glu, pons_5HT = range(2)
+
+
+pons[pons_5HT][k_NN] = 1000
+pons[pons_Glu][k_NN] = 1500
+medulla[medulla_GABA][k_NN] = 4000
+
+spine_NN = 15000
+spine[spine_Glu1][k_NN] = spine_NN / 2
+spine[spine_Glu2][k_NN] = spine_NN / 3
+spine[spine_GABA][k_NN] = spine_NN / 6
+
+nmj[nmj_Glu][k_NN] = spine_NN
+cellBodies[cellBodies_Glu][k_NN] = spine[spine_Glu1][k_NN]
+reticular_formation[reticular_formation_Glu][k_NN] = 1000
+reticular_formation[reticular_formation_5HT][k_NN] = 1000
+\end{lstlisting}
+Все нужные пути и отделы мозга представлены в виде словарей, где парами ключ-значение являются количество нейронов в отделе и название, \en{k\_NN} и \en{k\_name} соответственно. 
+Представленные данные о количестве нейронов приведены в соответствие с общей тенденцией проекта к численности нейронов.
+
+Остается соединить данные системы с готовой кодовой базой проекта, однако, стоит обратить внимание на Варолиев мост, он уже представлен в коде, поэтому он был расширен. В частности, к уже существующим cеротониновым рецепторам добавлена необходимая для нисходящего пути часть.
+
+В следующем листинге представлен код, создающий нужные для работы афферентных и эфферентных путей нейронные связи между частями мозга:
+\begin{lstlisting}
+# * * * ЭФФЕРЕНТНЫЕ * * *
+# * * * КОРТИКОСПИНАЛЬНЫЙ ТРАКТ * * *
+# connect(motor[motor_Glu1], medulla[medulla_GABA], syn_type=GABA, weight_coef=0.01)
+connect(motor[motor_Glu1], spine[spine_Glu1], syn_type=Glu)
+connect(spine[spine_Glu1], nmj[nmj_Glu], syn_type=Glu)
+
+# # * * * КОРТИКОБУЛЬБАРНЫЙ ТРАКТ * * *
+connect(motor[motor_Glu0], medulla[medulla_GABA], syn_type=Glu)
+# # * * * РЕТИКУЛОСПИНАЛЬНЫЙ ТРАКТ * * *
+connect(pons[pons_Glu], spine[spine_GABA], syn_type=Glu)
+connect(medulla[medulla_GABA], spine[spine_GABA], syn_type=GABA)
+
+# * * * АФФЕРЕНТНЫЕ * * *
+# * * * СПИНОТАЛАМИЧЕСКИЙ ПУТЬ * * *
+connect(cellBodies[cellBodies_Glu], spine[spine_Glu2], syn_type=Glu)
+connect(spine[spine_Glu2], thalamus[thalamus_Glu], syn_type=Glu)
+\end{lstlisting}
+
+По представленному коду видны проекции нейронных путей из моторной коры к спинному мозгу, и, в конечном итоге, к мышцам. 
+Также восходящий путь от клеток тела к таламусу, для интеграции сигнала, и дальнейшей отправки к коре головного мозга, в основном, к его сенсорной части, которая реализована, к сожалению, в ограниченном виде.
+
+\section{Тесты}
+Было проведено несколько серий тестов: 
+\begin{itemize}
+	\item серия из нескольких запусков с различным общим количеством нейронов для проверки быстродействия и потребления памяти
+	\item серия экспериментов для проверки полученной модели, описанные в \ref{section:validation}
+\end{itemize}

@@ -1,0 +1,204 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{nest}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e58d5335a949e7863e308800a0c25cda}{%
+           family={Kunkel},
+           familyi={K\bibinitperiod}}}%
+        {{hash=6c34a18b847eeb1f3ce2121e17163ab2}{%
+           family={Susanne},
+           familyi={S\bibinitperiod}}}%
+        {{hash=c3b2ca4e1cd26593d202b777d068da34}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{322f25189b7e10a565f49f5f0e536173}
+      \strng{fullhash}{322f25189b7e10a565f49f5f0e536173}
+      \strng{authornamehash}{322f25189b7e10a565f49f5f0e536173}
+      \strng{authorfullhash}{322f25189b7e10a565f49f5f0e536173}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Zenodo}
+      \field{title}{NEST 2.12.0.}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{neucogar}{article}{useauthor=false}
+      \name{author}{6}{}{%
+        {{hash=f3f5960344ecd954bf3c11497f9e5dbb}{%
+           family={Vallverdu},
+           familyi={V\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=226db6d27091eec83e3d1ff66d614fec}{%
+           family={Talanov},
+           familyi={T\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=737d12942f74986df1ede6757ec38e53}{%
+           family={Distefano},
+           familyi={D\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6c7505576b1704b5a301099024b9f82b}{%
+           family={Mazzara},
+           familyi={M\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d09aed28ac30d1f731367437631903e9}{%
+           family={Manca},
+           familyi={M\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2137ac4359a78c7b629dc89567d6f18f}{%
+           family={Tchitchigin},
+           familyi={T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{authornamehash}{5e95e0ea44294c15958cce3f2dfbe736}
+      \strng{authorfullhash}{b1b5bc2736886a8d9fa9b071aa78f13b}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of AI}
+      \field{title}{NEUCOGAR: когнитивная архитектура для биомиметического эмоционального ИИ}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
+    \entry{wiki:motor}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=11436f088eae19261826250cf2d25a50}{%
+           family={{Motor cortex}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{11436f088eae19261826250cf2d25a50}
+      \strng{fullhash}{11436f088eae19261826250cf2d25a50}
+      \strng{authornamehash}{11436f088eae19261826250cf2d25a50}
+      \strng{authorfullhash}{11436f088eae19261826250cf2d25a50}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Motor cortex --- {W}ikipedia{,} The Free Encyclopedia}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Motor_cortex
+      \endverb
+    \endentry
+    \entry{motorcortex}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e9bdc40f7b24168b7de5b8446cac867c}{%
+           family={Tsubo},
+           familyi={T\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d6ebbeb1569b692c03bf8c9d9b4b8d5b}{%
+           family={Isomura},
+           familyi={I\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=52cc2235e5bdf790d4e305659cf25616}{%
+           family={Fukai},
+           familyi={F\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d82ab983f753593f77accd6f8df71589}
+      \strng{fullhash}{d82ab983f753593f77accd6f8df71589}
+      \strng{authornamehash}{d82ab983f753593f77accd6f8df71589}
+      \strng{authorfullhash}{d82ab983f753593f77accd6f8df71589}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Front. Neural Circuits}
+      \field{title}{Neural dynamics and information representation in microcircuits of motor cortex.}
+      \field{year}{2013}
+      \field{dateera}{ce}
+    \endentry
+    \entry{corticospinal}{article}{useauthor=false}
+      \name{author}{4}{}{%
+        {{hash=5b8733fb95d1053a8b9e7eeb2c7d2371}{%
+           family={Jaspers},
+           familyi={J\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b6019b915c1c6962b31e51b901b941aa}{%
+           family={Byblow},
+           familyi={B\bibinitperiod},
+           given={WD},
+           giveni={W\bibinitperiod}}}%
+        {{hash=7ac1ed69686e848f4ddd6290454e6224}{%
+           family={Feys},
+           familyi={F\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1d8098493be0c5bcb566e675ea2fa6b8}{%
+           family={Wenderoth},
+           familyi={W\bibinitperiod},
+           given={N},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{authornamehash}{f3070c990563491b7e67d14f5e744b6e}
+      \strng{authorfullhash}{06ca7c11697c043fb59466e6570edb77}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Front. Pediatr.}
+      \field{title}{The Corticospinal Tract: A Biomarker to Categorize Upper Limb Functional Potential in Unilateral Cerebral Palsy.}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
+    \entry{cnsphysiology}{book}{}
+      \name{author}{2}{}{%
+        {{hash=1d819eddfb1747311d210ea3b5873bbc}{%
+           family={Данилова},
+           familyi={Д\bibinitperiod},
+           given={Н.Н.},
+           giveni={Н\bibinitperiod}}}%
+        {{hash=13e05c331529e816f32788d5d9b804d7}{%
+           family={Крылова},
+           familyi={К\bibinitperiod},
+           given={А.Л.},
+           giveni={А\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cfa7826a1e42cbec257dfaf09f19542}
+      \strng{fullhash}{6cfa7826a1e42cbec257dfaf09f19542}
+      \strng{authornamehash}{6cfa7826a1e42cbec257dfaf09f19542}
+      \strng{authorfullhash}{6cfa7826a1e42cbec257dfaf09f19542}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Физиология высшей нервной деятельности.}
+      \field{year}{2001}
+      \field{dateera}{ce}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

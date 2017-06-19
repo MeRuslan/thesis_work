@@ -1,0 +1,58 @@
+\chapter{Листинги исходного кода}
+\label{app:source_code_listings}
+
+\lstset{ %
+	language=Python,                % Язык программирования 
+	numbers=left,                   % С какой стороны нумеровать
+	stepnumber=1,                   % Шаг между линиями. Если 1, то будет пронумерована каждая строка 
+	showspaces=false,               
+	showstringspaces=false,         
+	showtabs=false,                
+	tabsize=4,                       % Tab - 2 пробела
+	breaklines=true,                 % Автоматический перенос строк
+}
+Код, необходимый для соединения различных восходящих и нисходящих путей с системой эмоциональной оценки.
+\begin{lstlisting}
+миром
+\end{lstlisting}
+
+Описания основных путей передачи сигналов в коде.
+\begin{lstlisting}
+# * * * EFFERENT * * *
+# * * * CORTICOSPINAL TRACT * * *
+# connect(motor[motor_Glu1], medulla[medulla_GABA], syn_type=GABA, weight_coef=0.01)
+connectIn(motor[motor_Glu1], spine[spine_Glu1], syn_type=Glu)
+connectIn(spine[spine_Glu1], nmj[nmj_Glu], syn_type=Glu)
+
+# # * * * CORTICOBULBAR TRACT * * *
+connect(motor[motor_Glu0], medulla[medulla_GABA], syn_type=Glu)
+# # * * * RETICULOSPINAL TRACT * * *
+connect(pons[pons_Glu], spine[spine_GABA], syn_type=Glu)
+connect(medulla[medulla_GABA], spine[spine_GABA], syn_type=GABA)
+
+# * * * AFFERENT * * *
+# * * * SPINOTHALAMIC TRACT * * *
+connect(cellBodies[cellBodies_Glu], spine[spine_Glu2], syn_type=Glu)
+connect(spine[spine_Glu2], thalamus[thalamus_Glu], syn_type=Glu)
+\end{lstlisting}
+
+Код, необходимый для запуска основного эксперимента --- \ref{section:validation1}
+\begin{lstlisting}
+connect_generator(nts[nts_a1], 0., 250., rate=250, coef_part=1)
+connect_generator(nts[nts_a2], 0., 250., rate=250, coef_part=1)
+connect_generator(prh[prh_GABA], 0., 250., rate=250, coef_part=1)
+connect_generator(pgi[pgi_GABA], 0., 250., rate=250, coef_part=1)
+connect_generator(pgi[pgi_Glu], 0., 250., rate=250, coef_part=1)
+connect_generator(ldt[ldt_a1], 0., 250., rate=250, coef_part=1)
+connect_generator(ldt[ldt_a2], 0., 250., rate=250, coef_part=1)
+connect_generator(ldt[ldt_Ach], 0., 250., rate=250, coef_part=1)
+connect_generator(lc[lc_N0], 0., 250., rate=250, coef_part=1)
+connect_generator(lc[lc_N1], 0., 250., rate=250, coef_part=1)
+
+connect_generator(prefrontal[pfc_5HT], 0., 250., rate=250, coef_part=1)
+connect_generator(motor[motor_5HT], 0., 250., rate=250, coef_part=1)
+connect_generator(rn[rn_dr], 0., 250., rate=250, coef_part=1)
+connect_generator(rn[rn_mnr], 0., 250., rate=250, coef_part=1)
+
+connect_generator(cellBodies[cellBodies_Glu], 200., 500., rate=250, coef_part=1)
+\end{lstlisting}
